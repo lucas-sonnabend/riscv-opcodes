@@ -202,3 +202,15 @@ fmadd.d   rd rs1 rs2 rs3 rm 26..25=1 6..2=0x10 1..0=3
 fmsub.d   rd rs1 rs2 rs3 rm 26..25=1 6..2=0x11 1..0=3
 fnmsub.d  rd rs1 rs2 rs3 rm 26..25=1 6..2=0x12 1..0=3
 fnmadd.d  rd rs1 rs2 rs3 rm 26..25=1 6..2=0x13 1..0=3
+
+# Tagged memory additions
+# - Hongyans instructions
+ltag	rd rs1 imm12		14..12=0 6..2=0x15 1..0=3
+stag	imm12hi rs1 rs2 imm12lo	14..12=1 6..2=0x15 1..0=3
+stal	imm12hi rs1 rs2 imm12lo	14..12=2 6..2=0x15 1..0=3
+# - Lucas' instructions
+ldct	rd rs1 imm12		14..12=4 6..2=0x15 1..0=3
+sdct	imm12hi rs1 rs2 imm12lo	14..12=5 6..2=0x15 1..0=3
+# - instructions for tagged registers
+wrt     rd rs1 rs2     31..25=0 14..12=6 6..2=0x15 1..0=3
+rdt     rd rs1         31..20=0 14..12=7 6..2=0x15 1..0=3

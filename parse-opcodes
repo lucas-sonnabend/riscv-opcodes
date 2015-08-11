@@ -43,6 +43,9 @@ causes = [
   (0x09, 'supervisor_ecall'),
   (0x0A, 'hypervisor_ecall'),
   (0x0B, 'machine_ecall'),
+  # tag exceptions
+  (0x0D, 'load tag'),
+  (0x0E, 'store tag'),
 ]
 
 csrs = [
@@ -50,6 +53,8 @@ csrs = [
   (0x001, 'fflags'),
   (0x002, 'frm'),
   (0x003, 'fcsr'),
+  (0x004, 'ld_tag'),
+  (0x005, 'sd_tag'),
 
   # Standard User RO
   (0xC00, 'cycle'),
