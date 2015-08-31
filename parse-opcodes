@@ -63,6 +63,10 @@ csrs = [
 
   # Nonstandard User R/W
   (0x0C0, 'stats'),
+  (0x801, 'utvec'),
+  (0x841, 'uepc'),
+  (0x842, 'ucause'),
+  (0x843, 'ubadaddr'),
 
   # Nonstandard User RO
   (0xCC0, 'uarch0'),
